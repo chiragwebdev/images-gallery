@@ -1,0 +1,109 @@
+* {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+}
+
+ul {
+	margin: 0px;
+	list-style: none;
+}
+img{
+	max-width: 100%;
+}
+
+
+.container{
+	max-width: 1300px;
+	margin: auto;
+}
+
+.column {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 10px;
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense;
+}
+.photo img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.column-2{
+	padding: 15px;
+	/* align-items: flex-start; */
+	columns: 200px 4;
+	column-gap: 15px;
+	max-width: 1200px;
+	margin: auto;
+}
+.column-2 img{
+	margin-bottom: 15px;
+	display: flex;
+}
+
+.column-3 {
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	grid-gap: 15px;
+	flex-wrap: wrap;
+	padding: 15px;
+}
+
+.column-3 img {
+	    height: 210px;
+	    object-fit: cover;
+	    flex: 1;
+	    min-width: 150px;
+	    width: 100%;
+}
+
+.btn-theme{
+	background-color: rgb(233, 233, 233);
+	padding: 10px;
+}
+.btn-theme-red{
+	background-color: rgb(255, 0, 0);
+	padding: 10px;
+}
+.btn-theme-green{
+	background-color: rgb(33, 196, 0);
+	padding: 10px;
+}
+
+.light-theme{
+	--bg: rgb(190, 190, 190);
+	--h1color: rgb(54, 54, 54);
+}
+.red-theme{
+	--bg: rgb(255, 195, 195);
+	--h1color: rgb(151, 19, 19);
+}
+.green-theme{
+	--bg: rgb(189, 255, 205);
+	--h1color: rgb(0, 126, 31);
+}
+
+body{
+	background-color: var(--bg);
+}
+h1{
+	color: var(--h1color);
+}

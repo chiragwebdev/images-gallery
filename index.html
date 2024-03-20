@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Images Gallery</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <button id="lightid" class="btn-theme">light</button>
+  <button id="redid" class="btn-theme-red">red</button>
+  <button id="greenid" class="btn-theme-green">green</button>
+  <input type="color" name="" id="color">
+
+  <h1>Images Gallery</h1>
+  <div class="container">
+
+    <div class="photo-gallery">
+      <div class="column">
+
+        <div class="photo">
+          <img src="https://source.unsplash.com/random" />
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/featured" />
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/random/?fruit" />
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/random/?car" />
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/random/?city" />
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/random/?bike" />
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/random/?girl" />
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/random/?man" />
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/random/?beauty" />
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/random/?nature" />
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/random/?sky" />
+        </div>
+        <div class="photo">
+          <img src="https://source.unsplash.com/random/?road" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <hr />
+
+  <div class="column-2">
+
+    <img src="https://source.unsplash.com/random" />
+    <img src="https://source.unsplash.com/featured" />
+    <img src="https://source.unsplash.com/random/?fruit" />
+    <img src="https://source.unsplash.com/random/?car" />
+    <img src="https://source.unsplash.com/random/?city" />
+    <img src="https://source.unsplash.com/random/?bike" />
+    <img src="https://source.unsplash.com/random/?girl" />
+    <img src="https://source.unsplash.com/random/?man" />
+    <img src="https://source.unsplash.com/random/?beauty" />
+    <img src="https://source.unsplash.com/random/?nature" />
+    <img src="https://source.unsplash.com/random/?sky" />
+    <img src="https://source.unsplash.com/random/?road" />
+  </div>
+
+  <hr />
+  <hr />
+
+  <div class="column-3">
+    <img src="https://source.unsplash.com/random" />
+    <img src="https://source.unsplash.com/featured" />
+    <img src="https://source.unsplash.com/random/?fruit" />
+    <img src="https://source.unsplash.com/random/?car" />
+    <img src="https://source.unsplash.com/random/?city" />
+    <img src="https://source.unsplash.com/random/?bike" />
+    <img src="https://source.unsplash.com/random/?girl" />
+    <img src="https://source.unsplash.com/random/?man" />
+    <img src="https://source.unsplash.com/random/?beauty" />
+    <img src="https://source.unsplash.com/random/?nature" />
+    <img src="https://source.unsplash.com/random/?sky" />
+    <img src="https://source.unsplash.com/random/?road" />
+  </div>
+
+
+
+  <!-- <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script> -->
+
+  <script>
+
+    // jQuery
+
+    // $(document).ready(function(){
+    //   $('.btn-theme').on("click",function(){
+    //     $('body').removeClass().addClass('light-theme');
+    //   })
+    //   $('.btn-theme-red').on("click",function(){
+    //     $('body').removeClass().addClass('red');
+    //   })
+    //   $('.btn-theme-green').on("click",function(){
+    //     $('body').removeClass().addClass('green');
+    //   })
+    // })
+
+    // var lightThemeButton = document.querySelector('.btn-theme');
+    // lightThemeButton.addEventListener("click", function () {
+    //   document.body.className = 'light-theme';
+    // });
+
+    // var redThemeButton = document.querySelector('.btn-theme-red');
+    // redThemeButton.addEventListener("click", function () {
+    //   document.body.className = 'red';
+    // });
+
+    // var greenThemeButton = document.querySelector('.btn-theme-green');
+    // greenThemeButton.addEventListener("click", function () {
+    //   document.body.className = 'green';
+    // });
+
+    //  javascript
+    // ** method 1 **
+    document.getElementById("lightid").onclick = function () {
+      document.body.className = 'light-theme';
+    }
+
+    // ** method 2 **
+    document.getElementById("redid").addEventListener("click", function () {
+      document.body.className = 'red-theme';
+    })
+
+    // ** method 3 **
+    document.querySelector("#greenid").onclick = function () {
+      document.body.className = 'green-theme'
+    }
+
+    // ** method 4 **
+    let greenThemeButton = document.getElementById('greenid');
+    greenThemeButton.addEventListener("click", function () {
+      document.body.className = 'green-theme';
+    });
+
+    let colorpick = document.getElementById('color');
+    // let h1 = document.getElementsByTagName('h1')[0];
+    colorpick.addEventListener('input', function () {
+      // document.body.style.backgroundColor = colorpick.value
+
+        // Getting the stylesheet
+     
+
+        // looping through all its rules and getting your rule
+        var sheets = document.styleSheets;
+
+      // for (var i = 0; i < sheets.length; i++) {
+      //   var rules = sheets[i].cssRules || sheets[i].rules;
+      //   console.log(rules)
+      //   for (var j = 0; j < rules.length; j++) {
+      //     if (rules[j].selectorText == ".my-class") {
+      //       rules[j].style.backgroundColor = "red";
+      //     }
+      //   }
+      // }
+
+      // console.log(sheets)
+
+        // modifying the rule in the stylesheet
+        // elementRules.style.setProperty('background', colorpick.value);
+        console.log(sheets[1].cssRules)
+        // for (var j = 0; j < sheets[0].cssRules.length; j++) {
+        //     if (document.styleSheets[0].cssRules[j].selectorText = 'body')
+        //     console.log(document.styleSheets[0].cssRules[j].style.color)
+        // }
+
+      //   var link = document.createElement("link");
+      // link.rel = "stylesheet";
+      // link.href = "css/style.css";
+      // document.head.appendChild(link);
+      // console.log(document.head.appendChild(link))
+
+    })
+
+
+
+
+
+  </script>
+</body>
+
+</html>
